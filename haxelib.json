@@ -1,0 +1,13 @@
+{
+    "name"         :  "bodge-ndlls",
+    "url"          :  "",
+    "license"      :  "BSD",
+    "tags"         :  ["neko", "cpp"],
+    "description"  :  "Easily export ndlls from libraries",
+    "version"      :  "0.0.0-alpha",
+    "classPath"    :  "lib",
+    "releasenote"  :  "Initial work",
+    "contributors" :  ["jonasmalacofilho"],
+    "dependencies" :  {}
+}
+
