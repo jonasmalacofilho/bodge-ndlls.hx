@@ -44,6 +44,8 @@ class Run {
 			var src = Path.join([tpath, ndll]);
 			var dest = Path.join([out, ndll]);
 			Sys.println('Copying $ndll');
+			if (!FileSystem.exists(out))
+				FileSystem.createDirectory(out);
 			File.saveBytes(dest, File.getBytes(src));
 		}
 		return something;
