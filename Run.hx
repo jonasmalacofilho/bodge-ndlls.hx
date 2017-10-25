@@ -61,7 +61,7 @@ class Run {
 				if (args.length == 0) error("Missing argument to -o,--out: output path");
 				out = args.shift();
 			case opt if (opt.substr(0, 1) == "-"):
-				if (Lambda.has(["-Linux64", "-Linux32", "-Windows", "-Mac", "-BSD"], opt) && target == null) {
+				if (Lambda.has(["-Linux64", "-Linux", "-Windows", "-Mac", "-BSD"], opt) && target == null) {
 					target = opt.substr(1);
 				} else {
 					error("Don't know what to do with option " + opt);
@@ -77,7 +77,7 @@ class Run {
 		if (target == null) {
 			target = Sys.systemName();
 			if (target == "Linux")
-				target += ((neko.Lib.load("std", "sys_is64", 0)():Bool) ? "64" : "32");
+				target += ((neko.Lib.load("std", "sys_is64", 0)():Bool) ? "64" : "");
 		}
 		Sys.println('Using target $target');
 		if (libs.length == 0) error("No library specified");
